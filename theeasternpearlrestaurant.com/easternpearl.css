@@ -1,0 +1,267 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+}
+#menuBar {
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background: rgba(255, 100, 0, 0.9);
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	z-index: 100;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#menuBar a {
+	color: white;
+}
+#menuBar a:hover, #food a:hover {
+	color: red;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+}
+.menuItem {
+	float: left;
+	width: 16.6%;
+	text-align: center;
+}
+#home {
+	background: url("goodbackground.jpg");
+    background-size: auto 100%;
+	text-align: center;
+	margin: 0;
+	font-size: 2.5em;
+	height: 100vh;
+}
+#home h1 {
+	font-family: 'Permanent Marker', cursive;
+	color: rgb(255, 100, 0);
+	font-size: 3.5em;
+	padding-top: 30vh;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	animation-name: name;
+	animation-duration: 2s;
+}
+#home h3 {
+	padding-top: 0;
+	margin-top: 0;
+	font-family: 'Orbitron';
+	color: rgb(255, 100, 0);
+	animation-name: briefDescription;
+	animation-duration: 2s;
+}
+@keyframes name {
+	from {
+		opacity: 0;
+		margin-left: -100vw;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0vw;
+	}
+}
+@keyframes briefDescription {
+	from {
+		opacity: 0;
+		margin-left: 100vw;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0vw;
+	}
+}
+#food {
+    background: url("thebackground.jpg");
+    background-size: auto 100%;
+    background-position: 45%;
+}
+#food a {
+    color: yellow;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+#dineIn, #takeOut, #banquet, #catering {
+    text-align: center;
+    padding: 2vw 2vw 2vw 2vw;
+    font-size: 1.5em;
+}
+#special_msg {
+    background: black;
+    font-size: 1.7em;
+    padding: 3vw 4vw 3vw 4vw;
+    margin: 0;
+}
+#aboutUs {
+    background: linear-gradient(orange, orangered);
+    font-size: 1.5em;
+    padding: 3vw 4vw 3vw 4vw;
+}
+#aboutUs h1 {
+    text-align: center;
+}
+/*
+#news {
+    font-size: 1.5em;
+    color: black;
+    height: 1500px;
+    background: url("10.jpg");
+    background-size: auto 100%;
+    padding-top: 2vw;
+}
+#news .col {
+    width: 96%;
+    padding: 2vw 2% 2vw 2%;
+    text-align: center;
+    float: left;
+}
+*/
+
+#news {
+    font-size: 1.5em;
+    color: black;
+    height: 800px;
+    background: url("10.jpg");
+    background-size: 100% auto;
+    padding-top: 2vw;
+}
+#news h1 {
+    text-align: center;
+}
+#news .col {
+    width: 45vw;
+    padding: 2vw 2vw 2vw 2vw;
+    text-align: center;
+    float: left;
+}
+
+#info {
+    background: black;
+	color: white;
+	height: 16rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	/*padding: 2vw 2vw 2vw 2vw;*/
+	margin-bottom: 0;
+}
+#info .col {
+    width: 31.333%;
+    padding-left: 1%;
+    padding-right: 1%;
+	float: left;
+	text-align: center;
+	height: 100%;
+}
+#info p {
+    font-size: 0.95em;
+}
+
+/* Image grid code credit to: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+.row {
+    width: 90%;
+    /*margin: auto;*/
+    display: flex;
+    flex-wrap: wrap;
+    /*padding: 10px 4px 14px 4px;*/
+    padding: 4vh 5% 4vh 5%;
+    margin: 0;
+    background: linear-gradient(orange, orangered);
+}
+
+/* Create four equal columns that sits next to each other */
+.imgColumn {
+    flex: 23%;
+    max-width: 23%;
+    padding: 0 1%;
+}
+
+.imgColumn img {
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
+}
+.row h5 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+    #menuBar {
+        font-size: 1.9em;
+    }
+    .imgColumn {
+        flex: 48%;
+        max-width: 48%;
+    }
+    #info {
+        height: 90rem;
+        font-size: 2em;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    #info p {
+        font-size: 1em;
+    }
+    #info .col {
+        width: 98%;
+        height: auto;
+    }
+    #aboutUs {
+        font-size: 2em;
+    }
+    #aboutUs p {
+        font-size: 1.1em;
+    }
+    #special_msg {
+        font-size: 2.4em;
+    }
+    #food {
+        font-size: 1.5em;
+    }
+    #news {
+        font-size: 2em;
+        color: black;
+        height: 1500px;
+        background: url("10.jpg");
+        background-size: auto 100%;
+        padding-top: 2vw;
+    }
+    #news .col {
+        width: 96%;
+        padding: 2vw 2% 2vw 2%;
+        text-align: center;
+        float: left;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .imgColumn {
+        flex: 98%;
+        max-width: 98%;
+    }
+}
+/* End image grid credit */
+
+#copyright {
+	position: fixed;
+	bottom: 3vh;
+	right: 3vw;
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+#copyright a {
+	text-decoration: none;
+	color: deepSkyBlue;
+}
